@@ -1,0 +1,56 @@
+hello i am abhishek chouhan ,i have 3 year of exprerience as a Backend developer.
+i have hands on exprerinece in node js
+and my skill sets are node js ,express and adonisjs for database  i used postgresql and mongodb.
+with the help of my skill set  i craeted difrent difrent project now i discribe venue booking and gym feet.in the project my role was bakend devloper.
+#############################################################Venue Booking applictation#############################
+Venue booking application is a web application in which  any dealer can post vanue like hotel,land ,marridge gardern and more
+and it's book by costomer.
+This makes the workload simple f or costomer  to book an event they need to search for it. 
+In this application, the costomer needs to be registered and login and  the user will 
+search for venues by giving the location if the venues were present in the particular location
+The costomer will see the full information about the venue and if is interested and if it  is available according to the date he will book .
+in the application create many apis fordealer and user 
+
+Admin:
+	Admin needs to login into the application using the Customer name and password and
+he can view the registered Customers and registered Dealers. Admin can also view them.
+
+Dealer:
+      The dealer needs to register the application before getting logged in after getting login the application welcomes Dealer with Dealer home screen, showing the functionalities of Dealer.
+He can add venues and view the Customer requests and accepts.
+
+Customer:
+	Customer need to be registered into the application before getting logged in, after getting the login access Customer will search for the venues based on the location, Customer will select the address on the map. Then Customer will see the list of events available in that location and Customer can book any one of them the request will be forwarded to Dealer.
+	
+Role:
+    Aechitecture and devloped backend using node js and express and  postgresql for database
+
+api :
+    1.i created rgister and login api for user and dealer
+    2.booking apis using ragerpay 
+    3.dashboard apis like a see all the booking and availbal  venue and  see book bye user payment status and more apis
+
+#########################################################gym feet##########
+It is an appointment management system with NodeJS that can be used by  a user to fix an appointment with the instructor.
+Instructor will have the power to create different time slots in which instructor is free to have a training session.
+ The end product should clearly show the available  slots to fix appointments and is very user friendly.
+  This application will store customer data, so it  must have a secure database to keep this information.
+ we also integrated payment gateway to have secure payment.
+  
+  
+################################invest it #####################################
+the project is based on investment ,there are mainly two type of investment type are fixed deposite and  flexible deposite 
+fixed deposite  is the type of deposite in which your money got locked for a time of periead 
+for example you have selected plan A that is your three month duration and invested percentage is 10 % so whatever the amount you invest you can withdraw after 3 month  and you will get intrest evryday according to intrest .
+and fexible deposite is you can withdraw any time rest is same .
+in this application user can withdrwal mony in the paypal account very easily it is very user friedly and secure for tranjection .
+then you have following options admin deshborda ,tranjection history ,block user ,user management
+create some of these apis user authetication, authorization
+paytm gatway implemnt and ragerpay  paymwnt gatway
+
+
+that's it is from my side
+    
+
+
+

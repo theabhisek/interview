@@ -1,0 +1,132 @@
+adonise
+express
+
+
+#################express#####
+ ExpressJS
+ Routing
+ Middleware
+ Templating
+ Debugging
+ 
+ 
+ ********** ExpressJS***************
+ ExpressJS or Express is an open-source and free server-side framework for Node.js. It was written in Javascript and is included in the MEAN, MEVN, and MERN stacks. Express provides middleware packages, routing capabilities, template code, and plugins for simplified web development.
+ 
+Faster server-side Development:
+ 				ExpressJS supports various valuable features of Node.js that you can use in the form of functions,
+ 				 which reduces the time of coding and increases development speed.
+Routing: 
+	ExpressJS supports a highly advanced routing mechanism that allows preserving the web page's state with the help of its URLs.
+	In Express JS, Routing determines an application's response to the client's request to a specific endpoint, a URI (or path), and a specific HTTP request method.
+        Each route contains one or more handler functions and is executed when the route is matched.
+
+       Following is the structure of Routing:
+
+        app.METHOD(PATH, HANDLER)
+	Where:
+
+	The app is an express's instance.
+	METHOD is an HTTP request method
+	PATH is a server's path
+	HANDLER is a callback function executed when the matching route is found.
+	
+	You can use four HTTP methods within the request. These methods help in identifying the function made by the user. Let's learn about each HTTP method in detail:
+
+	GET: The HTTP GET method helps retrieve information from the server using a given URI. 
+		The GET requests only retrieve data without causing any other effect on the data.
+	POST: The HTTP POST request method sends data to a server or updates a resource.
+	
+	PUT: The HTTP PUT request method helps accept the data enclosed within the request as an alteration to the current object specified by the URL.
+	
+	DELETE: This method requests the server to delete a particular resource from the destination.
+	
+	The following example illustrates the usage of all HTTP methods:
+
+	var express = require('express');
+	const app = express();
+	app.use(ExpressJSon());
+
+	app.get('/', (req, res) => {
+	  res.send('Hello World!')
+	})
+	The GET method is used to retrieve data from the server. This is a read-only method, so it has no risk of mutating or corrupting the data. 
+	For example,if we call the get method on our API.
+	
+	
+	
+	
+	app.post('/', (req, res) => {
+	  res.send('Got a POST request')
+	})
+	The POST method sends data to the server and creates a new resource.
+	The resource it creates is subordinate to some other parent resource.
+	 When a new resource is POSTed to the parent, the API service will automatically associate the new resource by assigning it an ID (new resource URI). 
+	 In short, this method is used to create a new data entry.
+	 
+	 
+	app.put('/user', (req, res) => {
+	  res.send('Got a PUT request at /user')
+	})
+	The PUT method is most often used to update an existing resource. 
+	If you want to update a specific resource (which comes with a specific URI), you can call the PUT method to that resource URI with the request body containing 		the complete new version of the resource you are trying to update.
+	
+	
+	app.delete('/user', (req, res) => {
+	  res.send('Got a DELETE request at /user')
+	})
+	The DELETE method is used to delete a resource specified by its URI.
+	
+Middleware:	 Middleware is responsible for the systemic organization of various functions of Express. It is a part of the program that handles requests and 			has access to the application's request-response cycle.
+
+		Application-level Middleware
+		Third-party Middleware
+		Error-handling Middleware
+		Built-in Middleware
+		Router-level Middleware
+		
+		Application-level Middleware:
+						You can use application-level Middleware to access an app object's instance using the app.use() and app.METHOD() 			functions, where METHOD is the HTTP request method that handles middleware functions like GET, POST, or PUT in lowercase.
+						
+		Router-level Middleware:This Middleware works exactly as application-level Middleware, except it is bound to an instance of Express.Router().
+		        SYNTAX :const express = require('express')
+				const app = express()
+				const router = express.Router()
+		
+		
+Templating: The inbuilt templating engines allow you to develop dynamic content on the web pages by building HTML templates on the server.
+
+Debugging: Debugging is a crucial aspect of web application development. Express makes debugging easier by identifying where precisely the bugs are.
+
+######################################CORS###############################################
+CORS stands for Cross-Origin Resource Sharing. It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API.
+
+In other words, CORS is a browser security feature that restricts cross-origin HTTP requests with other servers and specifies which domains access your resources.
+An API is a set procedure for two programs to communicate. This means that API resources are consumed by other clients and servers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

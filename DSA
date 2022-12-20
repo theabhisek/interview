@@ -1,0 +1,176 @@
+Selection sort.
+Bubble sort.
+Insertion sort.
+Merge sort.
+Quick sort.
+Heap sort.
+
+BINARY SEARCH
+LINEAR SEARCH
+
+
+But since it has the upper hand in the average cases for most inputs, Quicksort is generally considered the “fastest” sorting algorithm.
+##################################Selection sort.##########################
+The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from the unsorted part and
+ putting it at the beginning. 
+space complexity:O(n)
+best case:O(n*logN)
+average case:O(n*logn)
+worst case:O(n*n)
+method :selection
+
+function swap(arr,xp, yp)
+{
+	var temp = arr[xp];
+	arr[xp] = arr[yp];
+	arr[yp] = temp;
+}
+
+function selectionSort(arr, n)
+{
+	var i, j, min_idx;
+	
+	for (i = 0; i < n-1; i++)
+	{
+		min_idx = i;
+		for (j = i + 1; j < n; j++)
+		if (arr[j] < arr[min_idx])
+			min_idx = j;
+			
+		swap(arr,min_idx, i);
+	}
+}
+
+##########################################Bubble sort.#################################
+Bubble sort algorithm is an algorithm that sorts the array by comparing two adjacent elements and swaps them if they are not in the intended order.
+Here order can be anything like increasing order or decreasing order.
+    
+ for(var i = 0; i < arr.length; i++){
+   for(var j = 0; j < ( arr.length - i -1 ); j++){
+      
+     if(arr[j] > arr[j+1]){
+       var temp = arr[j]
+       arr[j] = arr[j + 1]
+       arr[j+1] = temp
+     }
+   }
+ }
+ // Print the sorted array
+ console.log(arr);
+}
+
+
+#####################################INSIRTION SORT###################
+Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+  void sort(int[] arr)
+    {
+        int n = arr.Length;
+        for (int i = 1; i < n; ++i) {
+            int key = arr[i];
+            int j = i - 1;
+ 
+            // Move elements of arr[0..i-1],
+            // that are greater than key,
+            // to one position ahead of
+            // their current position
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = key;
+        }
+    }
+##############################################MARGE sort#########################
+The Merge Sort algorithm is a sorting algorithm that is based on the Divide and Conquer paradigm. In this algorithm, the array is initially divided into two equal halves and then they are combined in a sorted manner.
+
+#############################HEAP SORT########################
+Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to the selection sort where we first find the minimum element and place the minimum element at the beginning. Repeat the same process for the remaining elements.
+// JavaScript program for implementation
+// of Heap Sort
+
+	function sort( arr)
+	{
+		var N = arr.length;
+
+		for (var i = Math.floor(N / 2) - 1; i >= 0; i--)
+			heapify(arr, N, i);
+
+		for (var i = N - 1; i > 0; i--) {
+			var temp = arr[0];
+			arr[0] = arr[i];
+			arr[i] = temp;
+
+			heapify(arr, i, 0);
+		}
+	}
+
+	function heapify(arr, N, i)
+	{
+		var largest = i; // Initialize largest as root
+		var l = 2 * i + 1; // left = 2*i + 1
+		var r = 2 * i + 2; // right = 2*i + 2
+
+		if (l < N && arr[l] > arr[largest])
+			largest = l;
+
+		if (r < N && arr[r] > arr[largest])
+			largest = r;
+
+		// If largest is not root
+		if (largest != i) {
+			var swap = arr[i];
+			arr[i] = arr[largest];
+			arr[largest] = swap;
+			
+			heapify(arr, N, largest);
+		}
+	}
+####################################3BINARY SEARCH #####################################
+Binary search is an efficient algorithm for finding an item from a sorted list of items.
+ It works by repeatedly dividing in half the portion of the list that could contain the item, 
+ until you've narrowed down the possible locations to just one.
+
+function binarySearch(arr, l, r, x){
+	if (r >= l) {
+		let mid = l + Math.floor((r - l) / 2);
+
+		// If the element is present at the middle
+		// itself
+		if (arr[mid] == x)
+			return mid;
+
+		// If element is smaller than mid, then
+		// it can only be present in left subarray
+		if (arr[mid] > x)
+			return binarySearch(arr, l, mid - 1, x);
+
+		// Else the element can only be present
+		// in right subarray
+		return binarySearch(arr, mid + 1, r, x);
+	}
+
+	// We reach here when element is not
+	// present in array
+	return -1;
+}
+
+let arr = [ 2, 3, 4, 10, 40 ];
+let x = 10;
+let n = arr.length
+let result = binarySearch(arr, 0, n - 1, x);
+(result == -1) ? document.write( "Element is not present in array")
+				: document.write("Element is present at index " +result);
+				
+###############################LINEAR SEARCH############################
+In this article, we will discuss the Linear Search Algorithm. Searching is the process of finding some particular element in the list. If the element is present in the list, then the process is called successful, and the process returns the location of that element; otherwise, the search is called unsuccessful.
+
+FOR (X OF Y){
+IF (X==P){
+CONSOLE.LOG("ELEMENT FOUND ")
+BREAK
+}
+}
+
+
+
+
