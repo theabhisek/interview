@@ -7,8 +7,6 @@ nvm install 19.1.0
 node 19.1.0
 npm:8.19.3
 
-
-
 domain 
 dns
 querystring
@@ -19,7 +17,6 @@ module:evenemiter,util,stream,querystring,zlib,tty,process,cronJob,cluster,unire
 local and global npm package list 
 node js benefit
 first call back error in node js
-
 cli
 javascript engine
 modules
@@ -45,18 +42,18 @@ api gateway architecture
 api gateway
 create server using http
 
-###################################################################################################################################################################
-moduls 
+
+@@@@@@@@@@@@@@@@@@@@@@@**start**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#####################********moduls ***************#############
 In Node.js Application, a Module can be considered as a block of code that provide a simple or complex functionality that can communicate with external application. Modules can be organized in a single file or a collection of multiple files/folders.
 their reusability throughout the application and ability to reduce the complexity of code into smaller piece.
 benefits using modules in javascript ecosystem
 Maintainability
 Reusability
 Namespacing
-	Express, connect, socket.io and SockeJS, pug, MongoDB and Mongojs, Redis, Lodash, forever, bluebird, moment are some of the npm modules.
+     Express, connect, socket.io and SockeJS, pug, MongoDB and Mongojs, Redis, Lodash, forever, bluebird, moment are some of the npm modules.
 
 	Core Modules:http,assert,fs,path,process,os
-	
 	http	creates an HTTP server in Node.js.
 	assert	set of assertion functions useful for testing.
 	fs	used to handle file system.
@@ -64,14 +61,11 @@ Namespacing
 	process	provides information and control about the current Node.js process.
 	os	provides information about the operating system.
 	querystring	utility used for parsing and formatting URL query strings.
-	
 	url	module provides utilities for URL resolution and parsing.
-*******************what is node js *******
 
-
-Why is Node.js Single-threaded?
-Node.js is single-threaded for async processing. By doing async processing on a single-thread under typical web loads, more performance and scalability can be 		achieved instead of the typical thread-based implementation.
-
+*******************Why is Node.js Single-threaded**************?
+Node.js is single-threaded for async processing. By doing async processing on a single-thread under typical web loads, more performance and scalability can be achieved instead of the typical thread-based implementation.
+But the I/O is run on separate threads/processes, because the I/O APIs in Node. js is asynchronous/non-blocking by design, in order to accommodate the singlethreaded event loop. Well Node. js is single threaded and asynchronous simply because it a JavaScript runtime.
 
 *************************thraed pool**********************************
 In Node. js there are two types of threads: one Event Loop (aka the main loop, main thread, event thread, etc.),
@@ -85,15 +79,16 @@ Thread pools are often used in server applications to improve performance by cre
 
 
 
-###########################first call back error#########################
+###########################**first call back error**#########################
 Error-first callback in Node. js is a function that returns an error object whenever any successful data is returned by the function. The first argument is reserved for the error object by the function. This error object is returned by the first argument whenever any error occurs during the execution of the function.
 The first argument in the function is reserved for the error object. If any error has occurred during the execution of the function, it will be returned by the first argument.
-The second argument of the callback function is reserved for any successful data returned by the function. If no error occurred then the error object will be set to null. 	
-**********************************repl###########################
+The second argument of the callback function is reserved for any successful data returned by the function. If no error occurred then the error object will be set to null.
+ 	
+************************************repl**###########################
 The Node.js Read-Eval-Print-Loop (REPL) is an interactive shell that processes Node.js expressions. The shell reads JavaScript code the user enters, evaluates the result of interpreting the line of code, prints the result to the user, and loops until the user signals to quit.
 
 The REPL is bundled with every Node.js installation and allows you to quickly test and explore JavaScript code within the Node environment without having to store it in a file.
-#############################################cli#####################
+#############################################**cli**#####################
 Command-line interfaces (CLIs) built in Node.js allow you to automate repetitive tasks while leveraging the vast Node.js ecosystem. And thanks to package managers like npm and yarn, these can be easily distributed and consumed across multiple platforms.
 A command-line interface (CLI) is a text-based user interface (UI) used to run programs, manage computer files and interact with the computer. Command-line interfaces are also called command-line user interfaces, console user interfaces and character user interfaces.
 **************************************************************buffer**************************************************************************************************
@@ -120,11 +115,40 @@ eventEmitter.emit('myEvent', "First event");
 listener:
 An event listener is a procedure in JavaScript that waits for an event to occur. The simple example of an event is a user clicking the mouse or pressing a key on the keyboard.
 
-####************************************************child process****************************************
+####************************************************childprocess*******************************
 exec() method: This method runs a command in a console and buffers the output.
 spawn() method: This method launches a new process with a given command.
 fork() method: This method is a special case of spawn() method to create child processes.
 
 ########################event loop##################
 Node.js is a single-threaded application, but it can support concurrency via the concept of event and callbacks. Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency Node thread keeps an event loop and whenever a task gets completed, it fires the corresponding event which signals the event-listener function to execute.
-
+########################Task-Scheduling###########################
+Task Sechedilng allows you to schedule your code to be exicute at schedule time and date .
+mostly  3 type of scheduler use in node js for scheduling.
+node-cron ,schedule and agenda
+mostly i used node-cron 
+cron job: these are the task that run periodically by the operating system.
+		user can schedule command automatically according to the given time.
+		it is usually used for system admin job such  as backup logging sending newsletter
+		subscription email and more.
+		we will use a package called node -cron  which is a task scheduler in pure javascript 
+		for node js .
+		there 
+		cron.schedule("* * * * * * ",function(){});
+		first star take second is optional;
+		second star take minute 
+		thread star take hour 
+		4th star take day of the month 
+		5th star take month 
+		6 th star take day of week
+Node Schedule
+			Node Schedule is a flexible cron-like and not-cron-like job scheduler for Node.js. It allows you to schedule jobs (arbitrary functions) for execution at specific dates, with optional recurrence rules. It only uses a single timer at any given time (rather than reevaluating upcoming jobs every second/
+Agenda
+		Agenda is a light-weight job scheduling library for Node.js that offers:
+		Minimal overhead. Agenda aims to keep its code base small.
+		Mongo backed persistence layer.
+		Promises based API.
+		Scheduling with configurable priority, concurrency, and repeating.
+		Scheduling via cron or human readable syntax.
+		Event backed job queue that you can hook into.
+		const Agenda = require('agenda');

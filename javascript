@@ -391,12 +391,14 @@ Promise.resolve()
 	avoiding the need to explicitly configure promise chains
 
 ################################hosting ###################################
-Hoisting is a JavaScript mechanism where variables, function declarations and classes are moved to the top of their scope before code execution.
+Hoisting is a JavaScript mechanism where variables, function declarations and c
+lasses are moved to the top of their scope before code execution.
  Remember that JavaScript only hoists declarations, not initialisation.
  This hoisting makes functions to be safely used in code before they are declared.
 
 ####################################JSON #################################
-json stend for javascript object notesion  json is a text-based data format following JavaScript object syntax, which was popularized by Douglas Crockford.
+json stend for javascript object notesion  json is a text-based data format following JavaScript object syntax, 
+which was popularized by Douglas Crockford.
  It is useful when you want to transmit data across a network and it is basically just a text file with an extension of .json;
  Parsing: Converting a string to a native object
  	JSON.parse(text);
@@ -507,7 +509,9 @@ Heap(Or memory heap) is the memory location where objects are stored when we def
 The eval() function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
 ###############################protoptype#####################
-Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype
+Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object,
+ so the prototype will have its own prototype, making what's called a prototype chain. 
+ The chain ends when we reach a prototype that has null for its own prototype
 
 
 

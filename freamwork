@@ -98,35 +98,26 @@ Templating: The inbuilt templating engines allow you to develop dynamic content 
 
 Debugging: Debugging is a crucial aspect of web application development. Express makes debugging easier by identifying where precisely the bugs are.
 
-######################################CORS###############################################
-CORS stands for Cross-Origin Resource Sharing. It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API.
+######################################**CORS**###############################################
+CORS stands for Cross-Origin Resource Sharing. It allows us to relax the security applied to an API. This is done by by passing the Access-Control-Allow-Origin headers, which specify which origins can access the API.
 
 In other words, CORS is a browser security feature that restricts cross-origin HTTP requests with other servers and specifies which domains access your resources.
 An API is a set procedure for two programs to communicate. This means that API resources are consumed by other clients and servers.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+################################**middleware**############
+the middeleware in node js is a function that will have  all the  access for requesting 
+an object and respondig an  object and move the next middleware function in the application 
+req res cycle.
+middleware can also send the respons to the server before the request the next function 
+is commonly repersented as a variable name next 
+simply middle ware is a function  that can only be applied using routes 
+we can access and modify request and response data using middleware.
+json function builtin middleware .
+middleware call automatic befor handler call with  the help of next function call handler after middleware.program to communicate with each other .
+##############*****api*******###########################
+so api is stand for application programing interface it is basically a set of rules that 
+devlopers craete on the server side to enable program to communicate with each other 
+there are two type of api function in node js asyncronouse non bloking and  syncronousbloking function 
+we are mainly work on rest apis so rest stand for representational state trnasfer 
+ rest determines heal the api will look and work and what architectural pattern devloper will follow to build it 
+ rest use http request like get put post delete to manage crud operation .
+ 
