@@ -2,8 +2,8 @@ let ar=[1,2,3,4,7,9,25]
 function abhi(ar){
 let c=[]
 let z=ar[0]
-let x=ar[ar.length-1
-let i=0
+let x=ar[ar.length-1]
+let i=0;
 while(z<=x)
 {
     if(z!=ar[i]){ 

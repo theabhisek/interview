@@ -1,5 +1,14 @@
-// let ar = [3, 1, 2, 5, 3];
-
+let ar = [3, 1, 2, 5,8, 5,6,9,10];
+let i=0;
+let j=ar.length-1;
+while(i<j){
+    let t=ar[i]
+    ar[i]=ar[j]
+    ar[j]=t
+    i++
+    j--
+}
+console.log(ar);
 
 
 // let x = 1;

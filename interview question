@@ -22,10 +22,8 @@ question:
 	21.orm and row query
 	22.redis
 	23.web soket
-	24.
 	
 	
-	
-	function callback(){
-	consolee.log("hello from call back")}
-	function 
+	// function callback(){
+	// consolee.log("hello from call back")}
+	// function 
