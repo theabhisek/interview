@@ -2,8 +2,8 @@ hello,as you know i am abhishek chouhan ,i have 3 year of exprerience as a Backe
 i have hands on exprerinece in node js
 and my skill sets are node js ,express and i have also knowladge of databases postgresql and mongodb.
 
-with the help of my skill set  i have worked on different projects.  those are venue booking and gym fit ,invest it . In this project my role was a bakend devloper.
-#####################################Venue Booking applictation#############
+i have worked on different projects.  those are venue booking and gym fit ,invest it . In this project my role was a bakend devloper.
+#####################################**Venue Booking applictation**#############
 Venue booking application is a web application in which  any vendor can post venues like hotel,land ,marriage gardern and more.
 then it can be booked by users for a certain period.
 This makes the workload simple for users to book an venue and they can also search for other things as well.
@@ -30,6 +30,7 @@ api :
     1.I have created rgister and login api for user and dealer
     2.booking apis using ragorpay 
     3.Also created some dashboard apis like to view all the venues availbal and after selecting a venue user can proceed with the payment as well.
+deificulties
 
 ##################################**gym fit**##########
 It is an appointment management system with NodeJS that can be used by  a user to fix an appointment with the instructor.
@@ -40,7 +41,7 @@ Instructor will have the power to create different time slots in which instructo
 ################################**invest it**#####################################
 the project is based on investment ,there are mainly two type of investment fixed deposite and  flexible deposite 
 fixed deposite  is the type of deposite in which your money got locked for a time period 
-for example you have selected plan A that is your three month duration and invested percentage is 10 % so whatever the amount you invest you can withdraw after 3 month  and you will get intrest everyday according to intrest.
+for example you have selected plan A that is  three month duration and invested percentage is 10 % so whatever the amount you invest you can withdraw after 3 month  and you will get intrest everyday according to intrest.
 and fexible deposite is that you can withdraw at any time and the rest is same as above.
 in this application user can withdrwal money in the paypal account very easily it is very user friendly and secure for transactions .
 then you have following options admin dashboard ,transaction history ,block user ,user management
