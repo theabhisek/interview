@@ -54,7 +54,7 @@ let and const have block scop.
 
 /*##########################################callback function#############################################
 
-A callback function can be defined as a function passed into another function as a parameter.its called callback.
+A callback function can be defined as a function passed into another function as a parameter.that is called callback.
 In other words, we can say that a function passed to another function as an argument is referred to as a callback function.
  The callback function runs after the completion of the outer function. 
  It is useful to develop an asynchronous JavaScript code.*/
@@ -103,14 +103,19 @@ let and const have a block scop
 
 
 /*####################################### Arow Function ###############################
-Arrow functions were introduced in the ES6 version of JavaScript. When compared to the regular functions, it allows the developers to write functions more cleanly. It doesn't create its execution content but inherits this from the outer function where the arrow function is defined.
+Arrow functions were introduced in the ES6 version of JavaScript. When compared to the 
+regular functions, it allows the developers to write functions more cleanly. 
+It doesn't create its execution content but inherits this from the outer function 
+where the arrow function is defined.
 */
 let wish = () => console.log(‘Good Afternoon’);
 wish();
 
+
 /*###########################################################This Keyword ####################################################################
 
-The ‘this’ keyword in JavaScript refers to the currently calling object. It is commonly used in constructors to assign values to object properties.
+The ‘this’ keyword in JavaScript refers to the currently calling object. 
+It is commonly used in constructors to assign values to object properties.
 */
 const test = {
   prop: 42,
@@ -209,8 +214,11 @@ Callback Hell:
 		console.log(err)}
 		
 /**############################################  Promise ####################################################	
-	A promise is an object that may produce a single value some time in the future : either a resolved value, or a reason that it's not resolved (e.g., a network 	error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending
-	Before promises, callbacks were used to handle asynchronous operations. But due to the limited functionality of callbacks, using multiple callbacks to handle 	asynchronous code can lead to unmanageable code.
+	A promise is an object that may produce a single value some time in the future : either a resolved value, or a reason that it's not resolved (e.g., a network 	error occurred). 
+	A promise may be in one of 3 possible states: fulfilled, rejected, or pending
+	Before promises, callbacks were used to handle asynchronous operations. 
+	But due to the limited functionality of callbacks, 
+	using multiple callbacks to handle 	asynchronous code can lead to unmanageable code.
 
 	Promise object has four states -
 
@@ -223,7 +231,8 @@ Callback Hell:
 
 	Promises are a way to implement asynchronous programming in JavaScript(ES6 which is also known as ECMAScript-6)
 	. A Promise acts as a container for future values.
-	A Promise is created when we are unsure of whether or not the assigned task will be completed. The Promise object represents the eventual completion (or 		failure) of an async(asynchronous) operation and its resulting value. As the name suggests from real life itself, a Promise is either kept or broken. A Promise 		is always in one of the following states:
+	A Promise is created when we are unsure of whether or not the assigned task will be completed. 
+	The Promise object represents the eventual completion (or failure) of an async(asynchronous) operation and its resulting value. As the name suggests from real life itself, a Promise is either kept or broken. A Promise 		is always in one of the following states:
 
 	fulfilled: Action related to the promise succeeded.
 	rejected: Action related to the promise failed.
@@ -391,8 +400,8 @@ Promise.resolve()
 	avoiding the need to explicitly configure promise chains
 
 ################################hosting ###################################
-Hoisting is a JavaScript mechanism where variables, function declarations and c
-lasses are moved to the top of their scope before code execution.
+Hoisting is a JavaScript mechanism where variables, function declarations and 
+classes are moved to the top of their scope before code execution.
  Remember that JavaScript only hoists declarations, not initialisation.
  This hoisting makes functions to be safely used in code before they are declared.
 
@@ -429,19 +438,18 @@ let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //retur
 Splice method modifies the original array and returns the deleted array.
 
 ##################################### first class function##########################
-In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
+In Javascript, functions are first class objects. First-class functions means when functions in that 
+language are treated like any other variable.
 
-For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.  
+For example, in such a language, a function can be passed as an argument to other functions,
+ can be returned by another function and can be assigned as a value to a variable.  
 const handler = () => console.log("This is a click handler function");
 
-
-
-
-
-
-
 ###################################temporal dead zone ###############################
-The Temporal Dead Zone is a behavior in JavaScript that occurs when declaring a variable with the let and const keywords, but not with var. In ECMAScript 6, accessing a let or const variable before its declaration (within its scope) causes a ReferenceError. The time span when that happens, between the creation of a variable’s binding and its declaration, is called the temporal dead zone.
+The Temporal Dead Zone is a behavior in JavaScript that occurs when declaring a variable with the let and const keywords, 
+but not with var. In ECMAScript 6, accessing a let or const variable before its declaration (within its scope) causes a ReferenceError. 
+The time span when that happens, between the creation of a variable’s binding and
+its declaration, is called the temporal dead zone.
 function somemethod() {
   console.log(counter1); // undefined
   console.log(counter2); // ReferenceError
@@ -461,7 +469,8 @@ const higherOrder = (ReturnFirstOrderFunc) => Return FirstOrderFunc();
 higherOrder(firstOrderFunc);
 
 ###############################unary function ###########################
-Unary function (i.e. monadic) is a function that accepts exactly one argument. It stands for a single argument accepted by a function
+Unary function (i.e. monadic) is a function that accepts exactly one argument. 
+It stands for a single argument accepted by a function
 
 
 
@@ -479,11 +488,15 @@ curryUnaryFunction(1)(2)(3);
 #####################################call backs need #########################
 The callbacks are needed because javascript is an event driven language. 
 That means instead of waiting for a response javascript will keep executing while listening for other events. 
-Let's take an example with the first function invoking an API call(simulated by setTimeout) and the next function which logs the message.
+Let's take an example with the first function invoking an API call(simulated by setTimeout) and
+ the next function which logs the message.
 
 
 ###############################regular expression###############################	
-A regular expression is a sequence of characters that forms a search pattern. You can use this search pattern for searching data in a text. These can be used to perform all types of text search and text replace operations. Let's see the syntax format now,
+A regular expression is a sequence of characters that forms a search pattern. 
+You can use this search pattern for searching data in a text.
+ These can be used to perform all types of text search and text replace operations. 
+ Let's see the syntax format now,
 
 
 #############################################getter setter#######################
@@ -495,24 +508,35 @@ Getters give you a way to define a property of an object, but they do not calcul
 
 Getters and setters are used to protect your data, particularly when creating classes. For each instance variable, a getter method returns its value while a setter method sets or updates its value. Given this, getters and setters are also known as accessors and mutators, respectively.
 Getters and Setters play an important role in retrieving and updating the value of a variable outside the encapsulating class. A setter updates the value of a variable, while a getter reads the value of a variable
-##################################microTask queue#########################################
-Microtask is the javascript code which needs to be executed immediately after the currently executing task/microtask is completed. They are kind of blocking in nature. i.e, The main thread will be blocked until the microtask queue is empty. The main sources of microtasks are Promise.resolve, Promise.reject, MutationObservers, IntersectionObservers etc
+##################################**microTask queue**#########################################
+Microtask is the javascript code which needs to be executed immediately after the currently executing 
+task/microtask is completed. They are kind of blocking in nature. i.e, The main thread will be blocked until 
+the microtask queue is empty. The main sources of microtasks are Promise.resolve, Promise.reject, MutationObservers,
+ IntersectionObservers etc
 
 
 Microtask Queue is the new queue where all the tasks initiated by promise objects get processed before the callback queue. The microtasks queue are processed before the next rendering and painting jobs. But if these microtasks are running for a long time then it leads to visual degradation.
 
 ###################################heap memory###############
-Heap(Or memory heap) is the memory location where objects are stored when we define variables. i.e, This is the place where all the memory allocations and de-allocation take place. Both heap and call-stack are two containers of JS runtime. Whenever runtime comes across variables and function declarations in the code it stores them in the Heap.
+Heap(Or memory heap) is the memory location where objects are stored when we define variables. i.e, 
+This is the place where all the memory allocations and de-allocation take place.
+Both heap and call-stack are two containers of JS runtime. 
+Whenever runtime comes across variables and function declarations in the code it stores them in the Heap.
 
 			####################evel############
 			
-The eval() function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
+The eval() function evaluates JavaScript code represented as a string and returns its completion value.
+ The source is parsed as a script.
 
 ###############################protoptype#####################
 Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object,
  so the prototype will have its own prototype, making what's called a prototype chain. 
  The chain ends when we reach a prototype that has null for its own prototype
+###################################Class #####################################
 
+Classes are a template for creating objects. They encapsulate data with code to work on that data. 
+Classes in JS are built on prototypes but also have some syntax and semantics that are not shared 
+with ES5 class-like semantics.
 
 
 
