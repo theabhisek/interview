@@ -29,7 +29,6 @@ readfile,create file in node js
 test pyramid
 reactor pattern
 lts
-eslint,jslint,eslint,jcsc
 stab
 timing feature
 event driven programming means
@@ -68,6 +67,9 @@ Node.js is single-threaded for async processing. By doing async processing on a 
 But the I/O is run on separate threads/processes, because the I/O APIs in Node. js is asynchronous/non-blocking by design, in order to accommodate the singlethreaded event loop. Well Node. js is single threaded and asynchronous simply because it a JavaScript runtime.
 
 *************************thraed pool**********************************
+
+A thread pool is a managed collection of threads that are available to perform tasks. Thread pools usually provide: Improved performance when executing large numbers of tasks due to reduced per-task invocation overhead. A means of bounding the resources, including threads, consumed when executing a collection of tasks.
+x
 In Node. js there are two types of threads: one Event Loop (aka the main loop, main thread, event thread, etc.),
  and a pool of k Workers in a Worker Pool (aka the threadpool). 
  If a thread is taking a long time to execute a callback (Event Loop) or a task (Worker), we call it "blocked".
@@ -115,12 +117,12 @@ eventEmitter.emit('myEvent', "First event");
 listener:
 An event listener is a procedure in JavaScript that waits for an event to occur. The simple example of an event is a user clicking the mouse or pressing a key on the keyboard.
 
-####*******************************childprocess*******************************
+####************************************************childprocess*******************************
 exec() method: This method runs a command in a console and buffers the output.
 spawn() method: This method launches a new process with a given command.
 fork() method: This method is a special case of spawn() method to create child processes.
 
-########################**event loop**##################
+########################event loop##################
 Node.js is a single-threaded application, but it can support concurrency via the concept of event and callbacks. Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency Node thread keeps an event loop and whenever a task gets completed, it fires the corresponding event which signals the event-listener function to execute.
 Event loop- The event loop is something that creates an illusion that javascript is multithreaded , though it is a single threaded synchronous in nature.Event loop checks consistently that if there is something in the callback queue and wether the call stack is yet ready(empty) to recieve another function from callback queue.Event loop is  is responsible to deliver that funtion from callback queue to the call stack in the javascript engine.
 ########################**Task-Scheduling**###########################
@@ -153,3 +155,56 @@ Agenda
 		Scheduling via cron or human readable syntax.
 		Event backed job queue that you can hook into.
 		const Agenda = require('agenda');
+##########################**package.json**##################
+The package. json file is the heart of any Node project. It records important metadata about a project which is required before publishing to NPM, and also defines functional attributes of a project that npm uses to install dependencies, run scripts, and identify the entry point to our package.
+It contains basic information about the project.
+It is mandatory for every project.
+It records important metadata about the project.
+It contains information such as name, description, author, script, and dependencies.
+###################**package.lock*****##########################
+it describes the exact tree that was generated to allow subsequent installs to have the identical tree.and it is  automatically generated for those operations where npm modifies either node_modules tree or package.json.and It allows future devs to install the same dependencies in the project and It contains the name, dependencies, and locked version of the project.
+
+################**how to kill all procces in node js ?**################
+The process.kill( pid[,signal] ) is an inbuilt technique in node.js that conveys a message to the cycle, pid (which is the interaction id) and sign are in the string design that is the sign to send.
+Syntax:
+	process.kill(pid[, signal])
+Boundaries: This technique acknowledges two boundaries as referenced above and depicted underneath:
+pid: This boundary holds the interaction ID.
+signal: This boundary holds the string design.
+signal names: These are in string design.
+The process.kill() strategy will toss a blunder on the off chance that the objective pid isn’t found or doesn’t exist. This technique returns boolean worth 0 assuming that pid exists and can be utilized as a test for the presence of the objective interaction. For window clients, this technique will likewise toss a mistake assuming pid is utilized to kill a gathering of interaction.
+
+Beneath models show the utilization of the process.kill() property in Node.js.
+
+####################**What is Reactor Pattern in Node.js ?**###########33
+Reactor Pattern is used to avoid the blocking of the Input/Output operations. It provides us with a handler that is associated with I/O operations. When the I/O requests are to be generated, they get submitted to a demultiplexer, which handles concurrency in avoiding the blocking of the I/O mode and collects the requests in form of an event and queues those events.
+
+There are two ways in which I/O operations are performed:
+
+Blocking I/O: Application will make a function call and pause its execution at a point until the data is received. It is called as ‘Synchronous’.
+
+Non-Blocking I/O: 
+				Application will make a function call, and, without waiting for the results it 
+continues its execution. It is called as ‘Asynchronous’.
+
+Note: Node.js is Asynchronous in nature.
+
+Reactor Pattern comprises of:
+
+
+Resources: They are shared by multiple applications for I/O operations, generally slower in executions.
+Synchronous Event De-multiplexer/Event Notifier: This uses Event Loop for blocking on all resources. When a set of I/O operations completes, the Event De-multiplexer pushes the new events into the Event Queue.
+Event Loop and Event Queue: Event Queue queues up the new events that occurred along with its event-handler, pair.
+Request Handler/Application: This is, generally, the application that provides the handler to be executed for registered events on resources.
+How Reactor Pattern works?
+Everything starts with the application. It makes a request and the event demultiplexer gathers those requests and then it forms queues know as Event Queues.
+Event demultiplexer is run by libuv which is a library that allows JavaScript code (via V8) to perform I/O, in-network, file, etc. It is an asynchronous IO library that allows Node.js to perform I/O.
+In the diagram above, there is only one event queue and there are 7 basics queues. Those queues have ascending priorities, the queue that has the highest priority is checked first by the event loop.
+The Timers queue has the highest priority. setTimeout and setInterval functions are queued here. Once the events are done in this queue, or time is up, the event loop passes those functions to call stack, named as executing handler.
+When one of the event queues is complete, instead of jumping to the next queue, the event loop firstly will check the other two queues which queue other micro tasks and process called nextTick functions. Then it will jump to the upcoming queue.
+Callback queue is an event queue and call stack is execute handler.
+
+#########******How the single threaded non blocking IO model works in NodeJS ?**###########
+Node.js is a JavaScript runtime environment that runs on the Chrome V8 engine and is used for server-side scripting. It takes requests from users, processes those requests, and returns responses to the corresponding users. 	
+It is based on single-threaded architecture: Since node.js gets multiple requests from multiple users it executes one command at a time. Due to this it can handle concurrent client requests very effectively and has good performance. q
+

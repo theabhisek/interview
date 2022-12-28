@@ -111,6 +111,7 @@ where the arrow function is defined.
 let wish = () => console.log(‘Good Afternoon’);
 wish();
 
+
 /*###########################################################This Keyword ####################################################################
 
 The ‘this’ keyword in JavaScript refers to the currently calling object. 
