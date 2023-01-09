@@ -169,3 +169,31 @@
 //     }
 // }
 // console.log(arr);
+// let ch ="b";
+// let n=12;
+// if (n>25){
+//     console.log(ch)
+// }
+
+// else{
+// let value =ch.charCodeAt();
+// console.log(value)
+// let ans=value+n;
+// if(ans>value && ans<=122)
+// console.log(String.fromCharCode(ans))
+// else {
+//     console.log(ch)
+// }
+
+let s=[1,1,1,1,]
+let ob={}
+let ans=[]
+ let c=0;
+ let count=0
+
+//  for(let i of s){
+//     ob[i]=ob[i]?ob[i]+1:1;
+
+//  }
+
+

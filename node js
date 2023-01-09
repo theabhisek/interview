@@ -66,6 +66,10 @@ Namespacing
 Node.js is single-threaded for async processing. By doing async processing on a single-thread under typical web loads, more performance and scalability can be achieved instead of the typical thread-based implementation.
 But the I/O is run on separate threads/processes, because the I/O APIs in Node. js is asynchronous/non-blocking by design, in order to accommodate the singlethreaded event loop. Well Node. js is single threaded and asynchronous simply because it a JavaScript runtime.
 
+
+HANDLE CONCURRENCY:	
+				 The multi threaded req and res stateless module  in not followed by node js platform and it adheres to the single threaded event loop model.the node js processing paradigm is heavily infuenced by the javascript event based model and the javascript callback system. As a result nodejs easily manage more concurrent client requests. the event loop is the processing model beating heart in nodejs. 
+
 *************************thraed pool**********************************
 
 A thread pool is a managed collection of threads that are available to perform tasks. Thread pools usually provide: Improved performance when executing large numbers of tasks due to reduced per-task invocation overhead. A means of bounding the resources, including threads, consumed when executing a collection of tasks.
@@ -93,10 +97,7 @@ The REPL is bundled with every Node.js installation and allows you to quickly te
 #############################################**cli**#####################
 Command-line interfaces (CLIs) built in Node.js allow you to automate repetitive tasks while leveraging the vast Node.js ecosystem. And thanks to package managers like npm and yarn, these can be easily distributed and consumed across multiple platforms.
 A command-line interface (CLI) is a text-based user interface (UI) used to run programs, manage computer files and interact with the computer. Command-line interfaces are also called command-line user interfaces, console user interfaces and character user interfaces.
-**************************************************************buffer*****************************************************
-js is used to perform operations on raw binary data. Generally, Buffer refers to the particular memory location in memory. 
-Buffer and array have some similarities, but the difference is array can be any type, and it can be resizable. 
-Buffers only deal with binary data, and it can not be resizable
+
 
 *******************************************************EventEmitter*******************************
 Node. js uses events module to create and handle custom events. The EventEmitter class can be used to create and handle custom events module..
@@ -122,7 +123,7 @@ exec() method: This method runs a command in a console and buffers the output.
 spawn() method: This method launches a new process with a given command.
 fork() method: This method is a special case of spawn() method to create child processes.
 
-########################event loop##################
+########################***event loop**##################
 Node.js is a single-threaded application, but it can support concurrency via the concept of event and callbacks. Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency Node thread keeps an event loop and whenever a task gets completed, it fires the corresponding event which signals the event-listener function to execute.
 Event loop- The event loop is something that creates an illusion that javascript is multithreaded , though it is a single threaded synchronous in nature.Event loop checks consistently that if there is something in the callback queue and wether the call stack is yet ready(empty) to recieve another function from callback queue.Event loop is  is responsible to deliver that funtion from callback queue to the call stack in the javascript engine.
 ########################**Task-Scheduling**###########################
@@ -207,4 +208,61 @@ Callback queue is an event queue and call stack is execute handler.
 #########******How the single threaded non blocking IO model works in NodeJS ?**###########
 Node.js is a JavaScript runtime environment that runs on the Chrome V8 engine and is used for server-side scripting. It takes requests from users, processes those requests, and returns responses to the corresponding users. 	
 It is based on single-threaded architecture: Since node.js gets multiple requests from multiple users it executes one command at a time. Due to this it can handle concurrent client requests very effectively and has good performance. q
+
+###########**Zlib**********###########
+the zlib  module is provides compress and decompress zip and unzip  functionalites it is 
+implemented gzip and deflate /inflate.
+
+method const zlip= require("zlip");
+
+compress and decompress a file can be done by piping the scure stream data 
+into a destination stream throough zlip stream.
+
+
+for exmaple we have a input.txt so with the help of zlip moduleto compress into input.txt.gz
+const zlib = require("zlib");
+const fs = require("fs");
+
+const zip = zlip.createGzip();
+
+const input = fs.createReadStream('inpute.txt');
+const output = fs.createWriteStream("inpute.txt.gz");
+
+input.pipe(zip).pipe(output);//it's imp method ist heart of zlib
+
+for exmaple we have a input.txt.gz so with the help of zlip moduleto compress into input.txt
+
+const zlib = require("zlib");
+const fs = require("fs");
+
+const unzip = zlip.createUnzip();
+
+const input = fs.createReadStream('inpute.txt.gz');
+const output = fs.createWriteStream("inpute.txt");
+
+input.pipe(unzip).pipe(output);//it's imp method ist heart of zlib
+
+
+################***event-driven**######################
+so an event driven programming approach uses event to trigger
+various funnctions. an event can be anything such as a typing key and clicking or mouse button .
+A  callback fuction already registered with the element executes whenever an event is triggered.
+
+###############***control Flow****###################
+the control flow function is a piece of code that runs in between several asynchronous function.
+
+####################**Assert**###############
+The assert module provide way of testing expressions.if the expression
+evaluates to 0 or false an assertion failuar is being caused and the program is terminated .
+there are some methhod of assert
+assert() this is check if a value is true 
+ok()this is check if a value is true 
+equal(),notEqual(),strictEqual(), notStrictEqual() there are check type an give error
+deepEqual(),notDeepEqual(),strictDeepEqual(),notStrcitDeepEqual()
+ifError(),fail(),throws(),doesNotthrow
+************************************Buffer*************************************
+js is used to perform operations on raw binary data. Generally, Buffer refers to the particular memory location in memory. 
+Buffer and array have some similarities, but the difference is array can be any type, and it can be resizable. 
+Buffers only deal with binary data, and it can not be resizable
+
 
